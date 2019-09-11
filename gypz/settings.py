@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     #lib
     'widget_tweaks',
     'corsheaders',
+
     #apps
     'apps.cartao',
     'apps.core'
@@ -138,6 +139,7 @@ LOGIN_URL='login'
 
 LOGIN_REDIRECT_URL ='home'
 LOGOUT_REDIRECT_URL='login'
+
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE':10
@@ -145,5 +147,5 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = [
-    "https://http://localhost:3000",
+    "https://localhost:3000",
 ]
