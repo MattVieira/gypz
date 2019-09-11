@@ -22,7 +22,7 @@ from rest_framework.authtoken.views import obtain_auth_token
 
 
 urlpatterns = [
-    path('api', include(router_card.urls)),
+    path('api/', include(router_card.urls)),
     path('admin/', admin.site.urls),
     path('', include('django.contrib.auth.urls')),
     path('', include('apps.core.urls')),
