@@ -39,6 +39,7 @@ INSTALLED_APPS = [
 
     #lib
     'widget_tweaks',
+    'corsheaders',
     #apps
     'apps.cartao',
     'apps.core'
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 
@@ -141,3 +143,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE':10
 
 }
+
+CORS_ORIGIN_WHITELIST = [
+    "https://http://localhost:3000",
+]
